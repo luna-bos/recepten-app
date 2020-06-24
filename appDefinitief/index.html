@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+
+    <title>Recepten app</title>
+</head>
+
+<body>
+
+    <!-- navbar navbar-expand-md navbar-dark bg-primary fixed-right -->
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="actief"><a href="index.html">Recepten<span class="sr-only">(current)</span></a></li>
+                    <li><a href="profiel.html">Profiel</a></li>
+                    <li><a href="zoek.html">Zoek bestaand recept</a></li>
+                    <!-- <li><a href="login.html">log uit</a></li> -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="container recepten">
+
+        <div class="receptFilter">
+            <button onclick="filterCake()" class="btnCake">Cake</button>
+            <button onclick="filterKoek()" class="btnKoek">Koek</button>
+            <button onclick="filterOverig()" class="btnOverig">Overig</button>
+
+        </div>
+
+        <div class="recipes container grey-text text-darken-1">
+            <h3 class="text-center">Recepten</h3>
+        </div>
+
+        <form id="add-recipe">
+            <input type="text" name="title" placeholder="Titel">
+            <input type="text" name="description" placeholder="Beschrijving">
+            <select id="type" name="type">
+                <option value="overig">Overig</option>
+                <option value="koek">Koek</option>
+                <option value="cake">Cake</option>
+              </select>           
+               <button class="btn btn-outline-secondary">add</button>
+        </form>
+        
+        <div class="row receptenPanels">
+
+
+
+            
+        </div>
+
+       
+
+    </div>
+
+</body>
+
+<script>
+    // Your web app's Firebase configuration
+  var firebaseConfig = {
+      apiKey: "AIzaSyB_cmkYvjPUEFwHphZKJyl7pQF9SklukFU",
+      authDomain: "recepten-app2.firebaseapp.com",
+      databaseURL: "https://recepten-app2.firebaseio.com",
+      projectId: "recepten-app2",
+      storageBucket: "recepten-app2.appspot.com",
+      messagingSenderId: "1016496061951",
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+<script src="js/main.js"></script>
+
+
+<script src="js/filter.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-analytics.js"></script>
+
+
+<footer>
+    Footer
+
+</footer>
+
+
+</html>

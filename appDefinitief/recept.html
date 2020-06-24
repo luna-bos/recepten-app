@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+    <title>Recepten app</title>
+</head>
+
+<body>
+
+    <!-- navbar navbar-expand-md navbar-dark bg-primary fixed-right -->
+
+    <nav class="navbar navbar-default detailNav">
+        <h3 class="detailTitel">Slagroomtaart</h3>
+       <span class="glyphicon glyphicon-remove btnExit" onclick="window.location='./index.html'"></span>
+    </nav>
+
+    <div class="container recept-detail">
+        <div class="receptIngredients">
+            <h3>Ingredienten</h3>
+                <div id="cboxes"></div>
+        </div>
+        <div class="receptPreparation">
+            <h3>Bereidingswijze</h3>
+            <div id="cboxes2"></div>
+
+
+        </div>
+    </div>
+</body>
+<footer>
+    Footer
+
+</footer>
+
+<script>
+    // Your web app's Firebase configuration
+ var firebaseConfig = {
+    apiKey: "AIzaSyB_cmkYvjPUEFwHphZKJyl7pQF9SklukFU",
+    authDomain: "recepten-app2.firebaseapp.com",
+    databaseURL: "https://recepten-app2.firebaseio.com",
+    projectId: "recepten-app2",
+    storageBucket: "recepten-app2.appspot.com",
+    messagingSenderId: "1016496061951",
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+</script>
+
+<script src="js/filter.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-analytics.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/recept.js"></script>
+
+</html>

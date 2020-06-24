@@ -1,0 +1,175 @@
+/*kleuren*/
+:root {
+    --primary: #FFECF4;
+    --secondary: rgb(255, 243, 236);
+    --cake: #F6EFFF;
+    --koek: #E5F8FF;
+    --overig: #E6FFF3;
+    --title: #3b3b3b;
+}
+
+body {
+    background-image: url('../img/background.jpg');
+}
+
+/* Nav bar */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    color: var(--title);
+    background-color: var(--primary);
+    align-items: center;
+}
+
+.actief {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+.nav {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.navbar-header {
+    background-color: var(--primary);
+}
+
+.navbar-header .navbar-brand .icon-bar {
+    color: var(--title);
+
+}
+
+.navbar-header {
+    color: var(--title)c;
+}
+
+.navbar-header .navbar-toggle {
+    /* background-color: #9dcbba; */
+    border: 0;
+}
+
+
+.collapse .nav li a {
+    color: var(--title);
+    background-color: var(--primary);
+}
+
+
+/*Recept filter knoppen*/
+.receptFilter {
+    width: 100%;
+}
+
+.btnCake {
+    background-color: var(--cake);
+    border: none;
+    padding: 5px 20px;
+}
+
+.btnKoek {
+    background-color: var(--koek);
+    border: none;
+    padding: 5px 20px;
+}
+
+.btnOverig {
+    background-color: var(--overig);
+    border: none;
+    padding: 5px 20px;
+}
+
+.hide{
+    display: none;
+}
+
+.activeFilter{
+    font-weight: bold;
+}
+
+/* Recepten */
+
+.panel .panel-heading {
+    color: var(--title);
+}
+
+.panel-cake .panel-heading {
+    background-color: var(--cake);
+}
+
+.panel-koek .panel-heading {
+    background-color: var(--koek);
+}
+
+.panel-overig .panel-heading {
+    background-color: var(--overig);
+}
+
+.panel {
+    background-color: var(--secondary);
+}
+
+.btn{
+    margin-left: auto;    
+    margin-right: auto;
+}
+/* Afbeelding van recept*/
+.img-fluid {
+    max-width: 25%;
+    margin-right: 10px;
+}
+
+
+.recept {
+    margin: 10px;
+}
+
+
+/*recepten zoek pagina*/
+.receptenZoeken {
+    background-color: var(--secondary);
+    padding: 5%;
+    height: auto;
+}
+
+#search {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.searchBar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.apiRecept {
+    padding-top: 5%;
+}
+
+/*Footer*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 3px;
+    background-color: var(--primary);
+    color: black;
+}
+
+/*recept details*/
+.btnExit{
+    float: right;
+    color: black;
+    margin: 5%;
+}
+
+.detailTitel{
+    float: left;
+    margin-left: 26%;
+}
+.detailNav{
+    background-color: var(--cake);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Recepten app</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Recepten<span class="sr-only">(current)</span></a></li>
+                    <li><a href="profiel.html">Profiel</a></li>
+                    <li class="actief"><a href="zoek.html">Zoek bestaand recept</a></li>
+                    <li><a href="login.html">log uit</a></li>
+
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Search form -->
+    <!-- Search form -->
+<div>
+    <div class="container receptenZoeken">
+
+        <div class="input-group">
+            <input id="search" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+                <button onclick="getrecepe(document.getElementById('search').value)" class="glyphicon glyphicon-search">
+                </button>
+            </div>
+        </div>
+
+
+        <div id="output" class="apiRecept"></div>
+        <a href="" id="sourceLink"></a>
+
+        <div id="output2" class="apiRecept"></div>
+        <a href="" id="sourceLink2"></a>
+
+        <div id="output3" class="apiRecept"></div>
+        <a href="" id="sourceLink3"></a>
+
+
+        <!-- <div class="searchBar">
+            <input id="search" ><button onclick="getrecepe(document.getElementById('search').value)"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        <div id="output">
+        </div>
+        <a href="" id="sourceLink"></a> -->
+
+    </div>
+</div>
+
+    
+</body>
+<footer>
+    Footer
+
+</footer>
+<script src="js/search.js"></script>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>

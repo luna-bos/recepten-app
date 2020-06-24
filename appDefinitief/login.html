@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
+  <title>Recepten app</title>
+</head>
+
+<body>
+
+
+  <form id="login-form">
+
+    <div class="container">
+      <label for="uname"><b>Email</b></label>
+     <br> <input type="text" placeholder="Gebruikersnaam" name="username" id="username" required>
+
+      <br><br><label for="psw"><b>Wachtwoord</b></label>
+      <br><input type="password" placeholder="Wachtwoord" name="password" id="password" required>
+
+      <br><button id="login-form-submit" type="submit">Login</button>
+    </div>
+  </form>
+
+  <form action="register.html">
+    <button type="submit">Registreer</button>
+  </form>
+
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyB_cmkYvjPUEFwHphZKJyl7pQF9SklukFU",
+        authDomain: "recepten-app2.firebaseapp.com",
+        databaseURL: "https://recepten-app2.firebaseio.com",
+        projectId: "recepten-app2",
+        appId: "1:1016496061951:web:50d7509c57d8b5a1697bca",
+        measurementId: "G-WPX3FYZ1LM"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+   
+    //make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    //update firestore settings
+    db.settings({timestampsInSnapshots: true})
+
+
+    firebase.analytics();
+</script>
+
+<script src="js/db.js"></script>
+<script src="js/login.js"></script>
+
+</html>
